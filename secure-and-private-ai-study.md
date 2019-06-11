@@ -20,3 +20,5 @@ Hi, everyone. I am a beginner and  I decided to make my own study notebooks and 
 - What is "For-Else" Statement
 - Plotting Train Losses vs Test Losses by using matplotlib
 
+[**Part 6**](/ai-study/secure-and-private-ai/deep-learning-with-pytorch/part6)
+- What is "for in" statement?
