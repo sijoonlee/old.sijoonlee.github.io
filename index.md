@@ -6,12 +6,19 @@ layout: default
 ---
 
 <div class="home">
-  <div class="module-wrap">
-    <div class="module-header"><a href="/ai-study/secure-and-private-ai">Secure and Private AI Scholarship Challenge</a></div>
-    <div class="module-item">
-        <p>This is the section for study and practices for
-        Secure and Private AI Scholarship Challenge Nanodegree Program</p>
+    <div class="module-wrap">
+        <div class="module-header"><a href="/ai-study/secure-and-private-ai">Secure and Private AI Scholarship Challenge</a></div>
+        <div class="module-item">
+            <p>This is the section for study and practices for
+            Secure and Private AI Scholarship Challenge Nanodegree Program</p>
+        </div>
     </div>
-  </div>
+    <div class="module-wrap">
+        <div class="module-header"><a href="/algorithm-study/">Algorithm and Data Structure Study</a></div>
+        <div class="module-item">
+            <p>This is the section for study and practices for Algorithm and Data Structure</p>
+        </div>
+    </div>
+
 </div>
 
