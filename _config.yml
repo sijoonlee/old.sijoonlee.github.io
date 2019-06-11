@@ -19,7 +19,7 @@ description: "Learn and Practice in computer programming and science - C++, Java
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sijoonlee
-
+github_url: "http://github.com/sijoonlee"
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
