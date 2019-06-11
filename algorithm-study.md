@@ -10,7 +10,7 @@ permalink: /algorithm-study/
 - From it, I wrote Java code for 5 sort algorithms
     - Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort
     - My code sorts integer arrays
-- Code: [Github Link](https://github.com/sijoonlee/algorithm_study/tree/master/Dijkstra-Shortest-Path)
+- Code: [Github Link](https://github.com/sijoonlee/algorithm_study/tree/master/sort)
 
 # [Dijkstra's Shortest Path Algorithm](/algorithm-study/Dijkstra)
 - Written in javascript
