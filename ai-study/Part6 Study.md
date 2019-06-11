@@ -1,12 +1,12 @@
 ---
 layout: page
-permalink: ai-study/secure-and-private-ai/deep-learning-with-pytorch/part2
+permalink: ai-study/secure-and-private-ai/deep-learning-with-pytorch/part6
 ---
 
 <html>
 <head><meta charset="utf-8" />
 
-<title>Part2 Study</title>
+<title>Part6 Study</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13120,74 +13120,56 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Part-2-Practices">Part 2 Practices<a class="anchor-link" href="#Part-2-Practices">&#182;</a></h1><h2 id="How-to-use-torch.sum()">How to use torch.sum()<a class="anchor-link" href="#How-to-use-torch.sum()">&#182;</a></h2><p>To sum all elements of a tensor:</p>
-<blockquote><p>torch.sum(outputs) # gives back a scalar</p>
+<h1 id="Part-6">Part 6<a class="anchor-link" href="#Part-6">&#182;</a></h1><h2 id="What-is-&quot;for-in&quot;-statement?">What is "for in" statement?<a class="anchor-link" href="#What-is-&quot;for-in&quot;-statement?">&#182;</a></h2><p>In Part 6 notebook, there is a "for in" statement like below:</p>
+<blockquote><p><strong>'hidden_layers': [each.out_features for each in model.hidden_layers]</strong>,</p>
 </blockquote>
-<p>To sum over all rows (i.e. for each column):</p>
-<blockquote><p>torch.sum(outputs, dim=0) # size = [ncol]</p>
-</blockquote>
-<p>To sum over all columns (i.e. for each row):</p>
-<blockquote><p>torch.sum(outputs, dim=1) # size = [nrow]</p>
-</blockquote>
-<p>Resource Link</p>
-<blockquote><p><a href="https://stackoverflow.com/questions/44790670/torch-sum-a-tensor-along-an-axis">https://stackoverflow.com/questions/44790670/torch-sum-a-tensor-along-an-axis</a></p>
+<p>How does it work?</p>
+<p>Resource:</p>
+<blockquote><p><a href="https://stackoverflow.com/questions/6475314/python-for-in-loop-preceded-by-a-variable">https://stackoverflow.com/questions/6475314/python-for-in-loop-preceded-by-a-variable</a></p>
 </blockquote>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Below-are-my-try-out-to-know-more-what-the-result-looks-like">Below are my try-out to know more what the result looks like<a class="anchor-link" href="#Below-are-my-try-out-to-know-more-what-the-result-looks-like">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="c1">## just simple practice</span>
-<span class="n">test_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test_tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">test_tensor</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># summation of values in the same column</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">test_tensor</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># summation of values in the same row</span>
-
-
-<span class="n">test_denominator</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test_denominator</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test_denominator</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-<span class="c1"># it&#39;s different form matrix multiplication</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test_tensor</span> <span class="o">/</span> <span class="n">test_denominator</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># (2,3) / (1,3) works</span>
-<span class="c1"># print(test_tensor / test_denominator.view(3,1)) # (2,3) / (3,1) doesn&#39;t work</span>
-
-<span class="c1"># print(test_tensor.mm(test_denominator.view(1,3))) # (2,3) / (1,3) doesn&#39;t work</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test_tensor</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">test_denominator</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># (2,3) / (3,1) works</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">hidden_layers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">each</span><span class="o">.</span><span class="n">out_features</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">hidden_layers</span><span class="p">])</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>torch.Size([2, 3])
-tensor([3, 6, 9])
-tensor([ 6, 12])
-tensor([1, 2, 3])
-torch.Size([3])
-tensor([[1, 1, 1],
-        [2, 2, 2]])
-tensor([[14],
-        [28]])
-</pre>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ModuleList</span><span class="p">(</span>
+  <span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  <span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  <span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">)</span>
 
+<span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="c1"># It turns out that [each.out_features for each in model.hidden_layers]   </span>
+<span class="c1"># returns an array that contains each out_features&#39; value in model.hidden_layers</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -13195,42 +13177,22 @@ tensor([[14],
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-is-[:]-?">What is [:] ?<a class="anchor-link" href="#What-is-[:]-?">&#182;</a></h2><p>It means everywhere(e.g. every items in a column, in a row, etc)<br>
-For example, myTensor[:, :] means items in every rows and columns of myTensor<br>
-See more examples below to know other usages</p>
-<p>Resource Link</p>
-<blockquote><p><a href="https://www.cs.virginia.edu/~vicente/recognition/notebooks/python_pytorch_plotting.html">https://www.cs.virginia.edu/~vicente/recognition/notebooks/python_pytorch_plotting.html</a></p>
-</blockquote>
+<h3 id="Other-Example">Other Example<a class="anchor-link" href="#Other-Example">&#182;</a></h3><p>Here's simple example to see how it works</p>
+<p>We can even use if statement</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myTensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. [:, :]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[:,</span> <span class="p">:])</span> <span class="c1"># 1. all elements</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. [0,0]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1"># 2. first element</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. [:2, :]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:])</span> <span class="c1"># 3. first two rows</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. [-2:, :]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:,</span> <span class="p">:])</span> <span class="c1"># 4. bottom two rows</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5. [:, :2]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># 5. right two columns</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;6. [:, -2:]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">2</span><span class="p">:])</span> <span class="c1"># 6. left two columns</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;7. [:2, :2]&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># 7. first two rows &amp; right two columns (2X2)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Elephant&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">each</span><span class="p">)</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">])</span> <span class="c1"># will return an array of each word&#39;s length</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">each</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">each</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">])</span> <span class="c1"># we can add &quot;If statement&quot;</span>
 </pre></div>
 
     </div>
@@ -13247,90 +13209,8 @@ See more examples below to know other usages</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1. [:, :]
-tensor([[1, 2, 3],
-        [2, 4, 6],
-        [3, 6, 9]])
-
-2. [0,0]
-tensor(1)
-
-3. [:2, :]
-tensor([[1, 2, 3],
-        [2, 4, 6]])
-
-4. [-2:, :]
-tensor([[2, 4, 6],
-        [3, 6, 9]])
-
-5. [:, :2]
-tensor([[1, 2],
-        [2, 4],
-        [3, 6]])
-
-6. [:, -2:]
-tensor([[2, 3],
-        [4, 6],
-        [6, 9]])
-
-7. [:2, :2]
-tensor([[1, 2],
-        [2, 4]])
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-is-'-1'-in-tensor.view(9,--1)-?">What is '-1' in tensor.view(9, -1) ?<a class="anchor-link" href="#What-is-'-1'-in-tensor.view(9,--1)-?">&#182;</a></h2><p>It means that the size -1 is inferred from other dimensions</p>
-<p>For example, when a tensor has 3X3 matrix,<br>
-tensor.view[9, -1] will generate [9,1] matrix</p>
-<p>Resource Link</p>
-<blockquote><p><a href="https://pytorch.org/docs/stable/tensors.html?highlight=view#torch.Tensor.view">https://pytorch.org/docs/stable/tensors.html?highlight=view#torch.Tensor.view</a></p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myTensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myTensor</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>tensor([[1],
-        [2],
-        [3],
-        [2],
-        [4],
-        [6],
-        [3],
-        [6],
-        [9]])
-torch.Size([9, 1])
+<pre>[3, 3, 8]
+[&#39;Elephant&#39;]
 </pre>
 </div>
 </div>
