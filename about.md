@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-
+## About Me
 Hello, I am Sijoon Lee, a learning enthusiast.
 
 Currenly I am expanding my knowledge in c++, java, web-dev and artificial intelligence.
