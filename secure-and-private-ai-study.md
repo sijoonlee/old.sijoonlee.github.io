@@ -2,7 +2,7 @@
 layout: page
 permalink: /ai-study/secure-and-private-ai/
 ---
-# Secure and Private AI Scholarship Challenge
+## Secure and Private AI Scholarship Challenge
 
 Hi, everyone. I am a beginner and  I decided to make my own study notebooks and share it with you. Some basic practices, useful links are included for beginners like me. Hope this help your study, I will keep this page updated as my study progresses
 

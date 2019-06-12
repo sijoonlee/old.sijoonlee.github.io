@@ -3,7 +3,7 @@ layout: page
 permalink: /algorithm-study/
 ---
 
-# Algorithm and Data structure
+## Algorithm and Data structure
 
 ## [5 Popular Sort Algorithms](https://github.com/sijoonlee/algorithm_study/tree/master/sort)
 - I read the article, ["A tour of the top 5 sorting algorithms with python code"](https://medium.com/@george.seif94/a-tour-of-the-top-5-sorting-algorithms-with-python-code-43ea9aa02889) written by George Seif
