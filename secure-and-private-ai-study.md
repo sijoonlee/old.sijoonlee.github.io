@@ -22,3 +22,12 @@ Hi, everyone. I am a beginner and  I decided to make my own study notebooks and 
 
 ### [Part 6](/ai-study/secure-and-private-ai/deep-learning-with-pytorch/part6)
 - What is "for in" statement?
+
+### [Part 7](/ai-study/secure-and-private-ai/deep-learning-with-pytorch/part7)
+- This is Neural Network training of Cat vs Dog Data set
+- It sums up what I have learned up until this point
+    - loading data
+    - setup model
+    - training & validating network
+    - saving and loading model checkpoint
+- The accuracy wasn't good at all ( ~ 0.5 )
