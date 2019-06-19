@@ -301,12 +301,10 @@ class DrawMaze{
     }
 }
     
-
-
-
-// const myDrawingBoard = new DrawingBoard(myGrid)
-// myDrawingBoard.draw()
-
+const myMaze = new Maze(10,10)
+const myDraw = new DrawMaze(myMaze.getReport())
+myDraw.clear()
+myDraw.draw()
 
 document.getElementById("drawMaze").addEventListener("click", () => {
     const myMaze = new Maze(10,10)
