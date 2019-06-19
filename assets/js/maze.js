@@ -124,31 +124,31 @@ class Vertex{
         this.children = []
     }
 
-    setKey = (key) => {
+    setKey(key) {
         this.key = key
     }
 
-    setVisited = () => {
+    setVisited() {
         this.visited = true
     }
 
-    getVisited = () => {
+    getVisited() {
         return this.visited
     }
 
-    setFound = () => {
+    setFound() {
         this.found = true
     }
 
-    getFound = () => {
+    getFound() {
         return this.found
     }
 
-    getCoordinate = () => {
+    getCoordinate() {
         return [this.x, this.y]
     }
 
-    addChild = (child) => {
+    addChild(child) {
         this.children.push(child)
     }
 
@@ -165,7 +165,7 @@ class Grid{
          
     }
 
-    findVertexByXY = (x,y) => {
+    findVertexByXY(x,y) {
         let index = this.vertices.findIndex( (vertex) => {
             let posX = vertex.getCoordinate()[0]
             let posY = vertex.getCoordinate()[1]
@@ -175,7 +175,7 @@ class Grid{
        
     }
 
-    findNeighbors = (vertex) => {
+    findNeighbors(vertex) {
         let posX = vertex.getCoordinate()[0]
         let posY = vertex.getCoordinate()[1]
         let neighbors = []
@@ -212,7 +212,7 @@ class Maze{
         this.explore(this.startingVertex)                      
     }
 
-    explore = (vertex) => {
+    explore(vertex) {
 
         let key = vertex.key
         vertex.setVisited()
@@ -255,11 +255,11 @@ class Maze{
             this.explore(next)
         } 
     }
-    getRandomInt = (max) => {
+    getRandomInt(max){
         return Math.floor(Math.random() * max);
     }
 
-    getReport = () => {
+    getReport(){
         return this.visitedVertices
     }
 }
@@ -274,11 +274,11 @@ class DrawMaze{
         this.canvas = document.getElementById(canvasID)
         this.ctx = this.canvas.getContext("2d")
     }
-    clear = () => {
+    clear(){
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
     }
-    draw = (vertex = this.startingVertex) => {
+    draw(vertex = this.startingVertex){
 
         if(vertex.key == 0){
             this.ctx.fillSytle = "#FF0000"
