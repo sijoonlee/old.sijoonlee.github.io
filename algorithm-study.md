@@ -20,6 +20,7 @@ permalink: /algorithm-study/
 
 ## [Maze-Creation Algorithm](/algorithm-study/Create-Maze)
 - Written in javascript
-- [Example](/algorithm-study/Create-Maze)
+- A variant of Depth First Search Algorithm 
 - "MaxHeap" class was created to mimick Heap Data sturucture that extracts max value
-- Code: [Github Link](https://github.com/sijoonlee/algorithm_study/tree/master/Dijkstra-Shortest-Path)
+- [Explanation and Example](/algorithm-study/Create-Maze)
+- Code: [Github Link](https://github.com/sijoonlee/algorithm_study/tree/master/Create-Maze)
