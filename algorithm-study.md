@@ -17,3 +17,9 @@ permalink: /algorithm-study/
 - "Heap" class was created to mimick Heap Data sturucture
 - [Explanation and Example](/algorithm-study/Dijkstra)
 - Code: [Github Link](https://github.com/sijoonlee/algorithm_study/tree/master/Dijkstra-Shortest-Path)
+
+## [Maze-Creation Algorithm](/algorithm-study/Create-Maze)
+- Written in javascript
+- [Example](/algorithm-study/Create-Maze)
+- "MaxHeap" class was created to mimick Heap Data sturucture that extracts max value
+- Code: [Github Link](https://github.com/sijoonlee/algorithm_study/tree/master/Dijkstra-Shortest-Path)
