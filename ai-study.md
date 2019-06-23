@@ -17,7 +17,7 @@ Udacity's "Intro to Deep Learning with PyTorch" course
 # Secure and Private AI Scholarship Challenge
 Udacity's "Secure and Private AI Scholarship Challenge" course
 - [Udacity's Lesson 2 Repo](https://github.com/udacity/deep-learning-v2-pytorch)
-- [Udacity's Lesson 3 and laster Repo](https://github.com/udacity/private-ai)  
+- [Udacity's Lesson 3 and later Repo](https://github.com/udacity/private-ai)  
 
 
 ## Lesson 2 Deep Learning With PyTorch
