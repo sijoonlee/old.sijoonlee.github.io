@@ -7,7 +7,7 @@ layout: default
 ## [C++ Nanodegree Program](/cpp-study/udacity-nanodegree/)  
 This is the section for study and practices for C++ Nanodegree Program
 
-## [Artificiall Intellegence Study](/ai-study/ai-study/)  
+## [Artificiall Intellegence Study](/ai-study/)  
 This is the section for study and practices for AI courses,  
 such as Secure and Private AI Scholarship Challenge Nanodegree Program
   
