@@ -6,9 +6,10 @@ permalink: /ai-study/
 
 Udacity's "Intro to Deep Learning with PyTorch" course
 - [Udacity's Course Repo](https://github.com/udacity/deep-learning-v2-pytorch)
-
+  
+## Lesson 5 Convolutional Neural Networks
+  
 ### [Part1](/ai-study/intro-to-deep-learning-with-pytorch/CNN/part1)
-- Study Note for Lesson 5 Convolutional Neural Networks
 - MNIST data set study
 
 <hr>
