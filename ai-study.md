@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /ai-study/ai-study
+permalink: /ai-study/ai-study/
 ---
 # Intro to Deep Learning with Pytorch
 
