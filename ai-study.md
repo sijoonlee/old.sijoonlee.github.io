@@ -1,10 +1,23 @@
 ---
 layout: page
-permalink: /ai-study/secure-and-private-ai/
+permalink: /ai-study/ai-study
 ---
-## Secure and Private AI Scholarship Challenge
+# Intro to Deep Learning with Pytorch
 
-Hi, everyone. I am a beginner and  I decided to make my own study notebooks and share it with you. Some basic practices, useful links are included for beginners like me. Hope this help your study, I will keep this page updated as my study progresses
+Udacity's "Intro to Deep Learning with PyTorch" course
+- [Udacity's Course Repo](https://github.com/udacity/deep-learning-v2-pytorch)
+
+### [Part1](/ai-study/intro-to-deep-learning-with-pytorch/CNN/part1)
+- Study Note for Lesson 5 Convolutional Neural Networks
+- MNIST data set study
+
+<hr>
+  
+# Secure and Private AI Scholarship Challenge
+Udacity's "Secure and Private AI Scholarship Challenge" course
+- [Udacity's Lesson 2 Repo](https://github.com/udacity/deep-learning-v2-pytorch)
+- [Udacity's Lesson 3 and laster Repo](https://github.com/udacity/private-ai)  
+
 
 ## Lesson 2 Deep Learning With PyTorch
 
