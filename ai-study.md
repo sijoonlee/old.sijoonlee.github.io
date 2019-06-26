@@ -10,7 +10,10 @@ Udacity's "Intro to Deep Learning with PyTorch" course
 ## Lesson 5 Convolutional Neural Networks
   
 ### [Part1](/ai-study/intro-to-deep-learning-with-pytorch/CNN/part1)
-- MNIST data set study
+- MNIST data set study - Multi-layer Perceptron
+
+### [Part2](/ai-study/intro-to-deep-learning-with-pytorch/CNN/part2)
+- MNIST data set study - Convolution Layer
 
 <hr>
   
