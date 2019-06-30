@@ -15,6 +15,9 @@ Udacity's "Intro to Deep Learning with PyTorch" course
 ### [Part2](/ai-study/intro-to-deep-learning-with-pytorch/CNN/part2)
 - MNIST data set study - Convolution Layer
 
+### [Part3](/ai-study/intro-to-deep-learning-with-pytorch/CNN/part3)
+- MNIST data set study - PATE analysis
+
 <hr>
   
 # Secure and Private AI Scholarship Challenge
